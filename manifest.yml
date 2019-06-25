@@ -1,0 +1,10 @@
+---
+applications:
+- name: multi-process-sample
+  buildpacks:
+  - nodejs_buildpack
+  processes:
+  - type: web
+    instances: 1
+  - type: worker
+    instances: 2

@@ -12,12 +12,8 @@ Hi, I love bananas!
 
 The `worker` process calculates the Fibonacci sequence and logs it to stdout.
 
-
-By default, `cf push`ing an app will only scale the `web` process.  To scale the `worker` process, run
-```
-(v6 cli) cf v3-scale <multi-process-app> --process worker -i 1
-(v7 cli) cf scale <multi-process-app> --process worker -i 1
-```
+This repository includes a `manifest.yml` that will scale the `web` process to 1 instance
+and the `worker` process to 2 instances.
 
 In the logs for the app, you will see messages from both processes interleaved, i.e.:
 ```
